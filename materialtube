@@ -1,0 +1,704 @@
+@-moz-document url-prefix("https://www.youtube.com/c/"), url-prefix("https://www.youtube.com/channel") {
+ytd-mini-guide-renderer.ytd-app {
+    display: none;
+}
+ytd-guide-renderer.ytd-app {
+    width: 240px !important;
+    padding: 0px 0px !important;
+    padding-top: 8px !important;
+}
+
+#container.ytd-masthead {
+    height: 47px !important;
+    background-color: hsl(0deg 100% 34%);
+    padding-top: 9px !important;
+}
+
+#guide-icon svg {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAA/CAYAAABXXxDfAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrs2IEJgDAMBMBW3Evc1FEySjepukb+HjrAQULDz733SM0xggMPDw8Pn5DzexVqf378FYovOw8PDw8PD9/7wrtD7WuqseDh4eHh+//zFWrX5Nh5eHh4eHj4vheeJsfYw8PDw8P3/ecr1K7JsfPw8PDw8PB9LzxNjrGHh4eHh4dvl1eAAQDlGhcBSKx58QAAAABJRU5ErkJggg==) 0 0 !important;
+    background-size: 15px 15px !important;
+    vertical-align: middle!important;
+    max-width: 100%;
+    max-height: 100px;
+    top: -6px!important;
+    width: 16px!important;
+    height: 16px!important;
+}
+
+#guide-icon.ytd-masthead {
+    fill: #fff0;
+}
+
+
+#search-clear-button.ytd-searchbox {
+    display: none;
+}
+
+#voice-search-button.ytd-masthead {
+    display: none;
+}
+/* logo */
+#logo-container .logo,
+.footer-logo-icon,
+#logo-icon,
+#logo-icon-container {
+    background: no-repeat url(data:image/png;base64,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) 0 0 !important;
+    background-size: 70px 30px !important;
+    margin-left: 8px!important;
+    top: 10px!important;
+    fill: none;
+}
+yt-icon.ytd-logo {
+    fill: none;
+}
+
+/* masthead buttons */
+.yt-spec-icon-badge-shape__icon {
+    left: 0;
+    margin-top: -2px;
+    margin-left: 1px;
+    background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflNlthLq.webp) -698px -257px;
+    background-size: auto;
+    width: 30px !important;
+    height: 30px!important;
+    filter: invert(1);
+    color: transparent;
+    top: 2px!important;
+}
+.yt-spec-icon-badge-shape__icon {
+    margin-right: -100px;
+}
+ytd-topbar-menu-button-renderer:nth-last-of-type(2) yt-icon {
+    background: no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUAgMAAAD9+YXZAAAADFBMVEUAAADOzs6Li4vOzs6Mb6QAAAAAAnRSTlMA70YmMtEAAAA7SURBVAjXjcmhDYBAAMDAC5JRWBJGeUk6DRs9gpAgqThTDFhOWIOtAzVY6mSt2KrjvX/8tM85L1Xj8QZuACAd38S3JgAAAABJRU5ErkJggg==);
+    fill: none;
+    position: relative;
+}
+ytd-topbar-menu-button-renderer:nth-last-of-type(2) yt-icon {
+    filter: brightness(100)!important;
+}
+ytd-button-renderer[is-paper-button] yt-icon.ytd-button-renderer {
+    display: none;
+}
+
+ytd-button-renderer.style-suggestive[is-paper-button] tp-yt-paper-button.ytd-button-renderer {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-color: rgba(0, 0, 0, 0)!important;
+    font-weight: 500;
+}
+
+
+ytd-button-renderer yt-formatted-string.ytd-button-renderer {
+    color: #fff;
+    top: 12px!important;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* fixing ugly stuff */
+#voice-search-button.ytd-masthead .ytd-masthead[is-icon-button],
+#buttons.ytd-masthead .ytd-masthead[is-icon-button] {
+    color: #fff;
+    outline: none;
+}
+
+/* if i can find a archive of material channel, this would be more complete */
+#channel-header.ytd-c4-tabbed-header-renderer,
+#tabs-inner-container.ytd-c4-tabbed-header-renderer {
+    background-color: #ae0000!important;
+}
+#subscriber-count.ytd-c4-tabbed-header-renderer {
+    color: #fdf6f6;
+}
+
+#text.ytd-channel-name {
+    color: #fdf6f6;
+}
+.selection-bar.tp-yt-paper-tabs {
+    border-bottom: 2px solid #ffffff;
+}
+tp-yt-paper-tab tp-yt-paper-tab .tp-yt-paper-tab[style-target=tab-content],
+.tp-yt-paper-tab[style-target=tab-content] {
+    color: #fff;
+}
+
+ytd-badge-supported-renderer[system-icons] .badge-style-type-verified.ytd-badge-supported-renderer yt-icon.ytd-badge-supported-renderer,
+ytd-badge-supported-renderer[system-icons] .badge-style-type-verified-artist.ytd-badge-supported-renderer yt-icon.ytd-badge-supported-renderer,
+ytd-badge-supported-renderer[system-icons] .badge-style-type-collection.ytd-badge-supported-renderer yt-icon.ytd-badge-supported-renderer,
+ytd-badge-supported-renderer[system-icons] .badge-style-type-ypc-transparent.ytd-badge-supported-renderer yt-icon.ytd-badge-supported-renderer {
+    display: none;
+}
+#contentContainer.tp-yt-app-drawer {
+    display: none;
+}
+/* placeholder shadows */
+tp-yt-paper-button.ytd-subscribe-button-renderer {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+#masthead-ad.ytd-browse {
+    pointer-events: none;
+    box-shadow: inset 0px 4px 8px -3px rgb(17 17 17 / 16%);
+    height: 8px;
+}
+#container.ytd-masthead {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+#guide {
+    display: none;
+}
+
+ytd-app[guide-persistent-and-visible] ytd-page-manager.ytd-app {
+    margin-left: 0;
+}
+
+#container.ytd-searchbox > [slot=search-input] input {
+    transition: 150ms background-color;
+    font-size: 18px;
+    padding: 2px 65px;
+}
+/* search */
+[d*="M20.87,20.17l-5.59"] {
+    d: path("M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z");
+    fill: #fff;
+}
+#container.ytd-searchbox {
+    background: #be0024;
+    border-color: #ae0000;
+    color: #e1e1e1;
+    border-radius: 2px;
+    padding: 0 6px;
+    display: block;
+    flex: 1;
+    align-items: center;
+    max-width: 584px;
+    top: 0px!important;
+    box-shadow: none;
+}
+
+#container.ytd-searchbox > [slot=search-input] input {
+    padding: 2px 65px!important;
+    /* base; credits to magma */
+}
+/* placeholder*/
+ytd-searchbox[has-focus] #search-icon.ytd-searchbox,
+#search-icon.ytd-searchbox {
+    display: block!important;
+    top: 2px;
+}
+td-searchbox.style-scope.ytd-masthead {
+    height: 32px;
+}
+
+form#search-form.style-scope.ytd-searchbox {
+    height: 32px;
+}
+
+button#search-icon-legacy.style-scope.ytd-searchbox {
+    width: 65px;
+    height: 32px;
+}
+
+button#search-icon-legacy.ytd-searchbox yt-icon.ytd-searchbox {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+#voice-search-button.ytd-masthead {
+    width: 36px;
+    height: 36px;
+}
+
+/* Disable the annoying thing when you click on a search box */
+#container.ytd-searchbox {
+    margin-left: 0px;
+}
+
+#container.ytd-searchbox > [slot=search-input] input {
+    box-sizing: border-box;
+    padding: 1px 6px;
+    margin: 0;
+}
+
+ytd-searchbox[has-focus] #search-icon.ytd-searchbox {
+    display: none;
+}
+
+ytd-searchbox[has-focus][desktop-searchbar-style=rounded_corner_dark_btn] #search-icon.ytd-searchbox,
+ytd-searchbox[has-focus][desktop-searchbar-style=rounded_corner_light_btn] #search-icon.ytd-searchbox {
+    display: none;
+}
+
+ytd-searchbox[has-focus] #container.ytd-searchbox {
+    padding: 2px 6px 2px 6px;
+    margin: 0;
+}
+
+#search[has-focus] #search-input {
+    margin-left: 0px !important;
+}
+
+div.sbqs_c::before {
+    display: none;
+}
+
+span.sbpqs_a::before {
+    display: none;
+}
+
+
+ytd-searchbox[desktop-searchbar-style="rounded_corner_dark_btn"] #searchbox-button.ytd-searchbox {
+    display: none !important;
+}
+
+ytd-searchbox[desktop-searchbar-style="rounded_corner_light_btn"] #searchbox-button.ytd-searchbox {
+    display: none !important;
+}
+
+search-icon-legacy.ytd-searchbox {
+    display: block !important;
+}
+
+.sbsb_a {
+    border-radius: 0 !important;
+}
+#search-icon-legacy.ytd-searchbox,
+#search-clear-button.ytd-searchbox {
+    display: none;
+}
+
+#voice-search-button.ytd-masthead {
+    display: none;
+}
+}
+
+@-moz-document url("https://www.youtube.com/"), url-prefix("https://www.youtube.com/results"), url-prefix("https://www.youtube.com/watch"), url-prefix("https://www.youtube.com/?bp=wgUCEAE%3D") {
+#container.ytd-masthead {
+    box-shadow: 0 3px 4px #f3f3f3, 0 3px 3px #d9dbda;
+    background-color: hsl(0deg 0% 100%);
+}
+/* insert rewrite for a public release */
+#container.ytd-searchbox {
+    background-color: #f5f5f5;
+    border-color: #f4f4f4;
+    color: #e1e1e1;
+    border-radius: 2px;
+    padding: 0 6px;
+    display: block;
+    flex: 1;
+    align-items: center;
+    max-width: 584px;
+    top: 0px!important;
+}
+
+#container.ytd-searchbox > [slot=search-input] input {
+    padding: 2px 65px!important;
+    /* base; credits to magma */
+}
+/* placeholder*/
+ytd-searchbox[has-focus] #search-icon.ytd-searchbox,
+#search-icon.ytd-searchbox {
+    display: block!important;
+    top: 2px;
+}
+td-searchbox.style-scope.ytd-masthead {
+    height: 32px;
+}
+
+form#search-form.style-scope.ytd-searchbox {
+    height: 32px;
+}
+
+button#search-icon-legacy.style-scope.ytd-searchbox {
+    width: 65px;
+    height: 32px;
+}
+
+button#search-icon-legacy.ytd-searchbox yt-icon.ytd-searchbox {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+#voice-search-button.ytd-masthead {
+    width: 36px;
+    height: 36px;
+}
+
+/* Disable the annoying thing when you click on a search box */
+#container.ytd-searchbox {
+    margin-left: 0px;
+}
+
+#container.ytd-searchbox > [slot=search-input] input {
+    box-sizing: border-box;
+    padding: 1px 6px;
+    margin: 0;
+}
+
+ytd-searchbox[has-focus] #search-icon.ytd-searchbox {
+    display: none;
+}
+
+ytd-searchbox[has-focus][desktop-searchbar-style=rounded_corner_dark_btn] #search-icon.ytd-searchbox,
+ytd-searchbox[has-focus][desktop-searchbar-style=rounded_corner_light_btn] #search-icon.ytd-searchbox {
+    display: none;
+}
+
+ytd-searchbox[has-focus] #container.ytd-searchbox {
+    padding: 2px 6px 2px 6px;
+    margin: 0;
+}
+
+#search[has-focus] #search-input {
+    margin-left: 0px !important;
+}
+
+div.sbqs_c::before {
+    display: none;
+}
+
+span.sbpqs_a::before {
+    display: none;
+}
+
+
+ytd-searchbox[desktop-searchbar-style="rounded_corner_dark_btn"] #searchbox-button.ytd-searchbox {
+    display: none !important;
+}
+
+ytd-searchbox[desktop-searchbar-style="rounded_corner_light_btn"] #searchbox-button.ytd-searchbox {
+    display: none !important;
+}
+
+search-icon-legacy.ytd-searchbox {
+    display: block !important;
+}
+
+.sbsb_a {
+    border-radius: 0 !important;
+}
+#search-icon-legacy.ytd-searchbox,
+#search-clear-button.ytd-searchbox {
+    display: none;
+}
+
+#voice-search-button.ytd-masthead {
+    display: none;
+}
+
+
+
+/* i like path ngl */
+ytd-button-renderer.style-suggestive[is-paper-button] tp-yt-paper-button.ytd-button-renderer {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-color: rgba(0, 0, 0, 0)!important;
+    font-weight: 500;
+}
+#button.ytd-button-renderer yt-icon.ytd-button-renderer + yt-formatted-string.ytd-button-renderer {
+    color: #f90002;
+}
+
+
+
+ytd-button-renderer[is-paper-button] yt-icon.ytd-button-renderer {
+    display: none;
+}
+
+
+#guide-icon.ytd-masthead {
+    fill: #bcbcbc;
+}
+/* paths again lol */
+/* learn how to resize a path later in life. */
+[d*="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z"] {
+    d: path("M 3 18 h 18 v -2 H 3 v 2 Z m 0 -5 h 18 v -2 H 3 v 2 Z m 0 -7 v 2 h 18 V 6 H 3 Z")!important;
+    color: #1116;
+    fill: currentColor;
+}
+
+/* since yt logo is confusing as hell, we sadly have to use bloody 2016 icon. */
+ytd-masthead #logo-icon-container,
+#contentContainer #logo-icon-container,
+ytd-topbar-logo-renderer > #logo,
+#start > #masthead-logo,
+#masthead > #masthead-logo {
+    content: url(https://raw.githubusercontent.com/omnidevZero/YouTubeRedux/49caa692ed25c6ae2067f757033d777408e1d427/Chrome/images/2015altlogo.svg) !important;
+    width: 72px !important;
+    padding: 18px 14px 18px 16px !important;
+}
+/* removing chips */
+#chips.yt-chip-cloud-renderer,
+#chips-wrapper.ytd-feed-filter-chip-bar-renderer {
+    display: none;
+}
+
+
+ytd-topbar-menu-button-renderer:nth-last-of-type(2) yt-icon {
+    background: no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUAgMAAAD9+YXZAAAADFBMVEUAAADOzs6Li4vOzs6Mb6QAAAAAAnRSTlMA70YmMtEAAAA7SURBVAjXjcmhDYBAAMDAC5JRWBJGeUk6DRs9gpAgqThTDFhOWIOtAzVY6mSt2KrjvX/8tM85L1Xj8QZuACAd38S3JgAAAABJRU5ErkJggg==) 0/70%;
+    fill: none;
+    position: relative;
+    left: 2px;
+}
+ytd-mini-guide-renderer.ytd-app {
+    display: none;
+}
+/* insert code from aaaa 2 */
+[d*="M20.87,20.17l-5.59"] {
+    d: path("M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z");
+}
+}
+
+@-moz-document url-prefix("https://www.youtube.com/watch") {
+ytd-watch-metadata {
+    display: none !important;
+}
+ytd-watch-flexy #info-contents,
+ytd-watch-flexy #meta-contents {
+    display: block !important;
+}
+#top-level-buttons-computed.ytd-menu-renderer:not(:empty) + #flexible-item-buttons.ytd-menu-renderer + #button.ytd-menu-renderer {
+    display: none!important;
+}
+#flexible-item-buttons.ytd-menu-renderer:not(:empty) > .ytd-menu-renderer[button-renderer] {
+    display: none;
+}
+
+/* insert code from aaaaaa */
+/*like dislike*/
+[d*="12.61,20.05,12.86,19.98,13.17z"],
+[d*="M3,11h3v10H3V11z M18.77,11h-4.2"] {
+    d: path("M 1 21 h 4 V 9 H 1 v 12 Z m 22 -11 c 0 -1.1 -0.9 -2 -2 -2 h -6.31 l 0.95 -4.57 l 0.03 -0.32 c 0 -0.41 -0.17 -0.79 -0.44 -1.06 L 14.17 1 L 7.59 7.59 C 7.22 7.95 7 8.45 7 9 v 10 c 0 1.1 0.9 2 2 2 h 9 c 0.83 0 1.54 -0.5 1.84 -1.22 l 3.02 -7.05 c 0.09 -0.23 0.14 -0.47 0.14 -0.73 v -1.91 l -0.01 -0.01 L 23 10 Z");
+    fill: #9e9e9e;
+}
+
+[d*="61L10.4,19.67z M20,13h-3V5h3V13z"],
+[d*="M18,4h3v10h-3V4z M5.23,14h4.23l-1.52"] {
+    d: path("M 15 3 H 6 c -0.83 0 -1.54 0.5 -1.84 1.22 l -3.02 7.05 c -0.09 0.23 -0.14 0.47 -0.14 0.73 v 1.91 l 0.01 0.01 L 1 14 c 0 1.1 0.9 2 2 2 h 6.31 l -0.95 4.57 l -0.03 0.32 c 0 0.41 0.17 0.79 0.44 1.06 L 9.83 23 l 6.59 -6.59 c 0.36 -0.36 0.58 -0.86 0.58 -1.41 V 5 c 0 -1.1 -0.9 -2 -2 -2 Z m 4 0 v 12 h 4 V 3 h -4 Z");
+    fill: #9e9e9e;
+}
+
+
+[d*="M15,5.63L20.66,12L15,18.37V15v-1"] {
+    d: path("M14 9V3L22 12L14 21V15C8.44 15 4.78 17.03 2 21C3.11 15.33 6.22 10.13 14 9Z");
+    fill: #9e9e9e;
+}
+
+
+
+ytd-button-renderer.style-default[is-icon-button] #text.ytd-button-renderer {
+    display: none;
+}
+.ryd-tooltip {
+    display: none;
+}
+ytd-toggle-button-renderer.style-text[is-icon-button] #text.ytd-toggle-button-renderer,
+ytd-toggle-button-renderer.style-text[is-icon-button] #text.ytd-toggle-button-renderer:hover {
+    color: #6f6d6d!important;
+    font-size: 11px!important;
+}
+div.style-scope.ytd-watch-flexy {
+    background-color: #fff;
+}
+}
+
+@-moz-document domain("youtube.com") {
+  /* taken from script */
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 500;
+      src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0fZraR2Tg8w2lzm7kLNL0-w.woff2)format('woff2');
+      unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 500;
+      src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0V4sYYdJg5dU2qzJEVSuta0.woff2)format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 500;
+      src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0VBW26QxpSj-_ZKm_xT4hWw.woff2)format('woff2');
+      unicode-range: U+1F00-1FFF;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 500;
+      src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0Qt_Rm691LTebKfY2ZkKSmI.woff2)format('woff2');
+      unicode-range: U+0370-03FF;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 500;
+      src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0dDiNsR5a-9Oe_Ivpu8XWlY.woff2)format('woff2');
+      unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 500;
+      src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0aE8kM4xWR1_1bYURRojRGc.woff2)format('woff2');
+      unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 500;
+      src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/OLffGBTaF0XFOW1gnuHF0Ygp9Q8gbYrhqGlRav_IXfk.woff2)format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Roboto Italic'), local('Roboto-Italic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/WxrXJa0C3KdtC7lMafG4dRkAz4rYn47Zy2rvigWQf6w.woff2)format('woff2');
+      unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Roboto Italic'), local('Roboto-Italic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/OpXUqTo0UgQQhGj_SFdLWBkAz4rYn47Zy2rvigWQf6w.woff2)format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Roboto Italic'), local('Roboto-Italic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/1hZf02POANh32k2VkgEoUBkAz4rYn47Zy2rvigWQf6w.woff2)format('woff2');
+      unicode-range: U+1F00-1FFF;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Roboto Italic'), local('Roboto-Italic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/cDKhRaXnQTOVbaoxwdOr9xkAz4rYn47Zy2rvigWQf6w.woff2)format('woff2');
+      unicode-range: U+0370-03FF;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Roboto Italic'), local('Roboto-Italic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/K23cxWVTrIFD6DJsEVi07RkAz4rYn47Zy2rvigWQf6w.woff2)format('woff2');
+      unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Roboto Italic'), local('Roboto-Italic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/vSzulfKSK0LLjjfeaxcREhkAz4rYn47Zy2rvigWQf6w.woff2)format('woff2');
+      unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Roboto Italic'), local('Roboto-Italic'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/vPcynSL0qHq_6dX7lKVByXYhjbSpvc47ee6xR_80Hnw.woff2)format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto Regular'), local('Roboto-Regular'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/sTdaA6j0Psb920Vjv-mrzH-_kf6ByYO6CLYdB4HQE-Y.woff2)format('woff2');
+      unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto Regular'), local('Roboto-Regular'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/uYECMKoHcO9x1wdmbyHIm3-_kf6ByYO6CLYdB4HQE-Y.woff2)format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto Regular'), local('Roboto-Regular'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/tnj4SB6DNbdaQnsM8CFqBX-_kf6ByYO6CLYdB4HQE-Y.woff2)format('woff2');
+      unicode-range: U+1F00-1FFF;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto Regular'), local('Roboto-Regular'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/_VYFx-s824kXq_Ul2BHqYH-_kf6ByYO6CLYdB4HQE-Y.woff2)format('woff2');
+      unicode-range: U+0370-03FF;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto Regular'), local('Roboto-Regular'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/NJ4vxlgWwWbEsv18dAhqnn-_kf6ByYO6CLYdB4HQE-Y.woff2)format('woff2');
+      unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto Regular'), local('Roboto-Regular'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/Ks_cVxiCiwUWVsFWFA3Bjn-_kf6ByYO6CLYdB4HQE-Y.woff2)format('woff2');
+      unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto Regular'), local('Roboto-Regular'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2)format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      src: local('Roboto Medium'), local('Roboto-Medium'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/ZLqKeelYbATG60EpZBSDy4X0hVgzZQUfRDuZrPvH3D8.woff2)format('woff2');
+      unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      src: local('Roboto Medium'), local('Roboto-Medium'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/oHi30kwQWvpCWqAhzHcCSIX0hVgzZQUfRDuZrPvH3D8.woff2)format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      src: local('Roboto Medium'), local('Roboto-Medium'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/rGvHdJnr2l75qb0YND9NyIX0hVgzZQUfRDuZrPvH3D8.woff2)format('woff2');
+      unicode-range: U+1F00-1FFF;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      src: local('Roboto Medium'), local('Roboto-Medium'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/mx9Uck6uB63VIKFYnEMXrYX0hVgzZQUfRDuZrPvH3D8.woff2)format('woff2');
+      unicode-range: U+0370-03FF;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      src: local('Roboto Medium'), local('Roboto-Medium'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/mbmhprMH69Zi6eEPBYVFhYX0hVgzZQUfRDuZrPvH3D8.woff2)format('woff2');
+      unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      src: local('Roboto Medium'), local('Roboto-Medium'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/oOeFwZNlrTefzLYmlVV1UIX0hVgzZQUfRDuZrPvH3D8.woff2)format('woff2');
+      unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      src: local('Roboto Medium'), local('Roboto-Medium'), url(//web.archive.org/web/20170819102755im_/https://fonts.gstatic.com/s/roboto/v16/RxZJdnzeo3R5zSexge8UUZBw1xU1rKptJj_0jans920.woff2)format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+  }
+}
